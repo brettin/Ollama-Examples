@@ -43,7 +43,8 @@ Things to try next:
 Building on Linux with GPU support
 
     CUDA_VERSION=$(nvcc --version | sed -n 's/^.*release \([0-9]\+\)\.\([0-9]\+\).*$/\1/p') go generate ./...
-run go build .
+
+    go build .
 
 
 
