@@ -13,7 +13,7 @@ Installation on rbdgx2
 
 Clone the ollama repository, build then start the server
 
-    https://github.com/jmorganca/ollama.git
+    git clone https://github.com/jmorganca/ollama.git
     cd ollama
     go generate ./...
     go build .
