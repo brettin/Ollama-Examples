@@ -31,6 +31,10 @@ To get a list of the installed models
 
     ollama show
 
+NAME            	ID          	SIZE  	MODIFIED    
+codellama:latest	36893bf9bc7f	3.8 GB	5 hours ago	
+llama2:latest   	d5611f7c428c	3.8 GB	5 hours ago
+
 This is an example:
 
     curl -X POST http://localhost:11434/api/generate -d '{
