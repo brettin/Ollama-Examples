@@ -35,7 +35,7 @@ And this pulls the llama 2b model which is ideal for debugging (faster response 
 
 To get a list of the installed models
 
-    ollama show
+    ollama list
 
 <pre>
 NAME            	ID          	SIZE  	MODIFIED    
