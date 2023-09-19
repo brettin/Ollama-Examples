@@ -38,7 +38,12 @@ This is an example:
         "prompt":"Why is the sky blue? Please keep the answer to less than 30 words"
     }' 2>&1  | perl -e 'while(<>){while(/\"response\"\:\"(.*)\",/g){print $1}}'
 
-Tom
+Things to try next:
+
+Building on Linux with GPU support
+
+    CUDA_VERSION=$(nvcc --version | sed -n 's/^.*release \([0-9]\+\)\.\([0-9]\+\).*$/\1/p') go generate ./...
+run go build .
 
 
 
