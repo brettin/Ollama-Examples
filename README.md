@@ -1,3 +1,8 @@
+### Inferencing is slow right now. Consider using the llama2 (7b) model for now
+if you just want to try it out. I will be working on performance, rebuilding to use CUDA,
+etc over the coming days.
+
+
 ### Notes on installation
 
 Installation on rbdgx2
