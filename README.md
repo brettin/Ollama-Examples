@@ -26,6 +26,12 @@ Models are automatically downloaded using the ollama run command, or alterhative
     # and this pulls the llama 2b model which is ideal for debugging (faster response time)
     
     ollama pull llama2
+
+To get a list of the installed models
+
+    ollama show
+
+
     
   
 
