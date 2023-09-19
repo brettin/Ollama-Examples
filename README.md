@@ -14,7 +14,7 @@ Clone the ollama repository, build then start the server
     go build .
     ./ollama serve
 
-Models are located at
+### Models are located at
 
     ln -s /rbscratch/brettin/.ollama $HOME/.ollama
     ls /rbscratch/brettin/.ollama
@@ -38,7 +38,30 @@ codellama:latest	36893bf9bc7f	3.8 GB	5 hours ago
 llama2:latest   	d5611f7c428c	3.8 GB	5 hours ago
 </pre>
 
-This is an example:
+or
+
+    curl http://localhost:11434/api/tags | python -m json.tool
+
+<pre>
+{
+    "models": [
+        {
+            "name": "codellama:latest",
+            "modified_at": "2023-09-19T11:39:28.784133-05:00",
+            "size": 3791811617,
+            "digest": "36893bf9bc7ff7ace56557cd28784f35f834290c85d39115c6b91c00a031cfad"
+        },
+        {
+            "name": "llama2:latest",
+            "modified_at": "2023-09-19T11:26:47.026252-05:00",
+            "size": 3791737662,
+            "digest": "d5611f7c428cf71fb05660257d18e043477f8b46cf561bf86940c687c1a59f70"
+        }
+    ]
+}
+</pre>
+
+### Examples
 
     curl -X POST http://localhost:11434/api/generate -d '{
         "model": "llama2",
@@ -52,7 +75,7 @@ THis adds a little perl hack to make the outpput nicer.
         "prompt":"Why is the sky blue? Please keep the answer to less than 30 words"
     }' 2>&1  | perl -e 'while(<>){while(/\"response\"\:\"(.*)\",/g){print $1}}print "\n"'
 
-Things to try next:
+### Things to try next:
 
 Building on Linux with GPU support
 
