@@ -16,7 +16,7 @@ Clone the ollama repository and build
 Models are located at
 
     ln -s /rbscratch/brettin/.ollama $HOME/.ollama
-    /rbscratch/brettin/.ollama
+    ls /rbscratch/brettin/.ollama
 
 Models are automatically downloaded using the ollama run command, or alterhatively using the ollama pull command.
 
