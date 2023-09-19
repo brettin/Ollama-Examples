@@ -39,8 +39,10 @@ To get a list of the installed models
 
 <pre>
 NAME            	ID          	SIZE  	MODIFIED    
-codellama:latest	36893bf9bc7f	3.8 GB	5 hours ago	
-llama2:latest   	d5611f7c428c	3.8 GB	5 hours ago
+codellama:latest	36893bf9bc7f	3.8 GB	6 hours ago	
+falcon:180b     	1528c70bad58	102 GB	5 hours ago	
+llama2:70b      	fc98e83ed93f	39 GB 	5 hours ago	
+llama2:latest   	d5611f7c428c	3.8 GB	6 hours ago	
 </pre>
 
 or
