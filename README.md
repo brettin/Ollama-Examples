@@ -36,7 +36,7 @@ This is an example:
     curl -X POST http://localhost:11434/api/generate -d '{
         "model": "llama2",
         "prompt":"Why is the sky blue? Please keep the answer to less than 30 words"
-    }' 2>&1  | perl -e 'while(<>){while(/\"response\"\:\"(.*)\",:/g){print $1}}'
+    }' 2>&1  | perl -e 'while(<>){while(/\"response\"\:\"(.*)\",/g){print $1}}'
 
 Tom
 
