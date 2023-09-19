@@ -23,7 +23,8 @@ Models are automatically downloaded using the ollama run command, or alterhative
     ollama run falcon:180b
     ollama pull llama2:70b
 
-    # this pulls the llama 2b model which is ideal for debugging (faster response time)
+    # and this pulls the llama 2b model which is ideal for debugging (faster response time)
+    
     ollama pull llama2
     
   
