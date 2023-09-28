@@ -11,3 +11,7 @@ You need cmake 3.27.5 or later
 
 You now clone and build ollama
 
+    git clone https://github.com/jmorganca/ollama.git
+    cd ollama
+    CUDA_VERSION=$(nvcc --version | sed -n 's/^.*release \([0-9]\+\)\.\([0-9]\+\).*$/\1/p') go generate ./...
+    
