@@ -22,7 +22,6 @@ It is best to set up a ollama model directory that is not defaulted to your home
     mkdir .ollama
     ln -s .ollama $HOME/.ollama
 
-
 Run the model server
 
     cd ollama
