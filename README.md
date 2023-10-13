@@ -1,7 +1,3 @@
-### Inferencing is slow right now. Consider using the llama2 (7b) model for now
-if you just want to try it out. I will be working on performance, rebuilding to use CUDA,
-etc over the coming days.
-
 ## Table of Contents
 1. [Notes on installation](#item-one)
 2. [Models are located at](#item-two)
