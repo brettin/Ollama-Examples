@@ -2,7 +2,13 @@
 if you just want to try it out. I will be working on performance, rebuilding to use CUDA,
 etc over the coming days.
 
+## Table of Contents
+1. [Notes on installation](#item-one)
+2. [Models are located at](#item-two)
+3. [Saving and reading model files in tmpfs](#item-five)
 
+
+<a id="item-one"></a>
 ### Notes on installation
 
 Installation on rbdgx2
@@ -19,6 +25,7 @@ Clone the ollama repository, build then start the server
     go build .
     ./ollama serve
 
+<a id="item-two"></a>
 ### Models are located at
 
     ln -s /rbscratch/brettin/.ollama $HOME/.ollama
@@ -68,6 +75,7 @@ or
 }
 </pre>
 
+<a id="item-three"></a>
 ### Examples
 
     curl -X POST http://localhost:11434/api/generate -d '{
@@ -82,6 +90,7 @@ THis adds a little perl hack to make the outpput nicer.
         "prompt":"Why is the sky blue? Please keep the answer to less than 30 words"
     }' 2>&1  | perl -e 'while(<>){while(/\"response\"\:\"(.*)\",/g){print $1}}print "\n"'
 
+<a id="item-four"></a>
 ### Things to try next:
 
 Building on Linux with GPU support
@@ -91,6 +100,7 @@ Building on Linux with GPU support
     go build .
 
 
+<a id="item-five"></a>
 ### Saving and reading model files in tmpfs
 
 When I tried to run the falcon:40b or the falcon:180b models, the ollama run command would fail. There was some indication that there was a timeout when loading the model.
