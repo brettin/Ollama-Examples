@@ -91,6 +91,32 @@ Building on Linux with GPU support
     go build .
 
 
+### Saving and reading model files in tmpfs
+
+When I tried to run the falcon:40b or the falcon:180b models, the ollama run command would fail. There was some indication that there was a timeout when loading the model.
+
+    # ollama stores models in $HOME/.ollama
+    cd /run
+    sudo mkdir .ollama
+    sudo chown brettin .ollama
+    ln -s /run/.ollama $HOME/.ollama
+ 
+    export PATH=$PATH:/rbscratch/brettin/Ollama-Examples/ollama/
+    ollama ls
+    
+    # download a model
+    # ollama pull falcon:40b
+    
+    # run a model
+    ollama run falcon:40b
+
+    # resize tmpfs
+    # sudo mount -o remount,size=300G /run
+    # donload another model
+    # ollama pull falcon:180b
+
+
+
 
     
   
