@@ -5,7 +5,9 @@ etc over the coming days.
 ## Table of Contents
 1. [Notes on installation](#item-one)
 2. [Models are located at](#item-two)
-3. [Saving and reading model files in tmpfs](#item-five)
+3. [Examples](#item-three)
+4. [Things to try next](#item-four)
+5. [Saving and reading model files in tmpfs](#item-five)
 
 
 <a id="item-one"></a>
