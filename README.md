@@ -87,17 +87,8 @@ THis adds a little perl hack to make the outpput nicer.
         "prompt":"Why is the sky blue? Please keep the answer to less than 30 words"
     }' 2>&1  | perl -e 'while(<>){while(/\"response\"\:\"(.*)\",/g){print $1}}print "\n"'
 
+
 <a id="item-four"></a>
-### Things to try next:
-
-Building on Linux with GPU support
-
-    CUDA_VERSION=$(nvcc --version | sed -n 's/^.*release \([0-9]\+\)\.\([0-9]\+\).*$/\1/p') go generate ./...
-
-    go build .
-
-
-<a id="item-five"></a>
 ### Saving and reading model files in tmpfs
 
 When I tried to run the falcon:40b or the falcon:180b models, the ollama run command would fail. There was some indication that there was a timeout when loading the model.
@@ -122,6 +113,14 @@ When I tried to run the falcon:40b or the falcon:180b models, the ollama run com
     # donload another model
     # ollama pull falcon:180b
 
+<a id="item-five"></a>
+### Things to try next:
+
+Building on Linux with GPU support
+
+    CUDA_VERSION=$(nvcc --version | sed -n 's/^.*release \([0-9]\+\)\.\([0-9]\+\).*$/\1/p') go generate ./...
+
+    go build .
 
 
 
