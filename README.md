@@ -91,13 +91,19 @@ THis adds a little perl hack to make the outpput nicer.
 <a id="item-four"></a>
 ### Saving and reading model files in tmpfs
 
-When I tried to run the falcon:40b or the falcon:180b models, the ollama run command would fail. There was some indication that there was a timeout when loading the model.
+    # ollama stores models in $HOME/.ollama by default.
+    mkdir /dev/shm/.ollama
+    chmod g+rwx /dev/shm/.ollama
+    
+    chmod g+s /dev/shm/.ollama
+    setfacl -d -m g::rwx /dev/shm/.ollama
+    setfacl -d -m o::rx /dev/shm/.ollama
 
-    # ollama stores models in $HOME/.ollama
-    cd /run
-    sudo mkdir .ollama
-    sudo chown brettin .ollama
-    ln -s /run/.ollama $HOME/.ollama
+    mkdir -p /dev/shm/.ollama/models
+    chmod g+rwx .ollama .ollama/models
+
+    mkdir $HOME/.ollama
+    ln -s /dev/shm/.ollama/models $HOME/.ollama/models
  
     export PATH=$PATH:/rbscratch/brettin/Ollama-Examples/ollama/
     ollama ls
